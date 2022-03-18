@@ -5,27 +5,35 @@ namespace KinalLab.Edu.Kinal.Lab.Entities
 {
     public class Profesor : Persona, IOperaciones
     {
-        public string Cui { get; set; }
-        public string cargo { get; set; }
+        public string Cui {get;set;}
+        public string Cargo {get;set;}
 
-        public Profesor()
+        public Profesor() : base()
         {
             
         }
 
-        public void EliminarAsignatura(string asignatura)
+        public Profesor(string uuid, string apellidos, string nombres, string email, string cui, string cargo)
+            : base(uuid, apellidos, nombres, email)
         {
-            throw new NotImplementedException();
+            this.Cui = cui;
+            this.Cargo = cargo;
         }
 
-        public void ListarDatos(string identificador)
+        public bool EliminarAsignatura(string asignatura)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Se ha elminado la asignatura {this.Apellidos} {this.Nombres}");
+            return true;
+        }
+
+        public void ListarMisDatos(string identificador)
+        {
+            Console.WriteLine($"{this.Uuid} {this.Apellidos} {this.Nombres} {this.Cargo}");
         }
 
         public override void TomarAsistencia()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Tomando Asistencia de {this.Apellidos} {this.Nombres}");
         }
     }
 }

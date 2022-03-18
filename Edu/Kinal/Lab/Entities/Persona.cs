@@ -1,18 +1,21 @@
 namespace KinalLab.Edu.Kinal.Lab.Entities
 {
     public abstract class Persona
-    {
-        public string uuid { get; set; }
-
-        public string apellidos { get; set; }
-
-        public string nombres { get; set; }
-        public string email { get; set; }
+   {
+        public string Uuid {get;set;}
+        public string Apellidos {get;set;}
+        public string Nombres {get;set;}
+        public string Email {get;set;}
         public abstract void TomarAsistencia();
-
         public Persona()
+        {            
+        }
+        public Persona(string uuid, string apellidos, string nombres, string email)
         {
-            
+            this.Uuid = uuid;
+            this.Apellidos = apellidos;
+            this.Nombres = nombres;
+            this.Email = email;
         }
     }
 

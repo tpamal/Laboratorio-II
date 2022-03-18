@@ -2,8 +2,7 @@ namespace KinalLab.Edu.Kinal.Lab.Interfaces
 {
     public interface IOperaciones
     {
-        public void ListarDatos(string identificador);
-        public void EliminarAsignatura(string asignatura);
-
+        public void ListarMisDatos(string identificador);
+        public bool EliminarAsignatura(string asignatura);
     }
 }
